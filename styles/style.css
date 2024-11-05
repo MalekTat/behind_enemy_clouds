@@ -1,15 +1,11 @@
 body, html {
     padding: 0;
-    text-align: center;
     margin: 0;
+    text-align: center;
+    box-sizing: border-box;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
- }
-   #game-intro {
+  #game-intro {
     display: none;
     padding: 0px 0px;
   } 
@@ -17,20 +13,17 @@ body, html {
   #game-container {
     display: block;
     overflow: hidden;
+    width: 100vw;
   } 
 
 #game-screen {
-    display: block;
-    align-content: center;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+    /* align-content: center; */
     height: 100vh ;
     width: 300vw;
     background-image: url(../images/background.png);
-    background-size: cover;
+    background-size: cover; 
     transform: translateX(0);
-    animation: slide 15s linear 1s infinite; 
+    animation: slide 15s linear infinite; 
     
   }
   
@@ -39,4 +32,9 @@ body, html {
         transform: translateX(-66.66%);
       }
     
+  }
+
+  .img-flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
