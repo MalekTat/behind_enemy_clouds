@@ -1,18 +1,16 @@
-class airplane {
-    constructor() {
+class crashairplane {
+    constructor(left,top,forth) {
       this.gameScreen = document.getElementById("game-container");
-      this.positions =[{left:0,top:40,forth:true},{left:88,top:50,forth:false}];
-      this.randomIndex = Math.floor(Math.random() * this.positions.length);
-      this.left = this.positions[this.randomIndex].left;
-      this.top = this.positions[this.randomIndex].top;
-      this.forth = this.positions[this.randomIndex].forth;
+      
+      this.left = left;
+      this.top = top;
+      this.forth = forth;
       this.width = 10;
-      this.height = 7;
+      this.height = 10;
       
      
       this.element = document.createElement("img");
-      this.randNum = Math.floor(Math.random() * 6 )
-      this.element.src = `images/airlines/airline${this.randNum}.png`;
+      this.element.src = `images/crash.png`;
       this.element.style.position = "absolute";
       this.element.style.height = `${this.height}%`;
       this.element.style.width = `${this.width}%`;
@@ -23,15 +21,25 @@ class airplane {
       this.gameScreen.appendChild(this.element);
     }
     move() {
-      if(this.forth){
-        this.left += 0.2;
-      } else {
-        this.left += -0.4;
-      }
+
+        if (this.top < 78 ){
+            this.top += 0.2;
+            if(this.forth){
+                this.left += 0.09;
+            }
+            else {  
+                this.left += -0.09;
+            }
+        } else {
+            this.element.src = `images/explosion.png`;
+            this.left += -0.09
+        }
+           
       this.updatePosition();
     }
+
     updatePosition() {
       this.element.style.left = `${this.left}%`;
+      this.element.style.top = `${this.top}%`;
     }
-
   }

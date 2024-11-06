@@ -9,18 +9,62 @@
 <body>
     <main>
         
+
         <div id="game-intro">
-          
-        </div> 
+
+            <P id="title" >Behind Enemy Clouds</P>
+
+             <div class ="info" >
+                <h3 >Move Controls :</h3> 
+                <ul>
+                    <li>Press Up Arrow to move up.</li>
+                    <li>Press Down Arrow to move down.</li>
+                    <li>Press Left Arrow to move left.</li>
+                    <li>Press Right Arrow to move right.</li>
+                </ul>
+                <h3 >Fire Control:</h3> 
+                <ul>
+                    <li>Press Space Bar to fire.</li>
+                </ul>
+
+             </div> 
+
+            <img src="images/arrowsimg.png" class="arrows-img" />
+
+            <p id="enjoy">Good luck and have fun!</p>
+            
+            
+            
+            <button id="start-button">
+                <span class="start-button-shadow"></span>
+                <span class="start-button-edge"></span>
+                <span class="start-button-front text">
+                  Start Game
+                </span>
+            </button>
+        </div>
+
+
   
         <div id="game-container">
+            
             <div id="game-screen" ></div>
+            <div >
+                <p id="lives"></p>
+                <p id = "score"></p>   
+            </div>
+            
         </div>
   
+
         
-        <!-- <div id="game-end">
+        <div id="game-end">
+
+            <h1>Game Over</h1>
+            <h3 id="score1"></h3>
+            <button id="restart-button">Restart</button>
           
-        </div> -->
+        </div>
 
     </main>
       
@@ -30,5 +74,6 @@
     <script type="text/javascript" src="js/airplane.js"></script>
     <script type="text/javascript" src="js/bomb.js"></script>
     <script type="text/javascript" src="js/target.js"></script>
+    <script type="text/javascript" src="js/crashaireplane.js"></script>
 </body>
 </html>
