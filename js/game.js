@@ -18,9 +18,9 @@ class Game {
       this.frames = 0;
 
 
-      this.baseExplosion = new Audio("../sounds/baseExplosion.wav");
+      this.baseExplosion = new Audio("sounds/baseExplosion.wav");
       this.baseExplosion.volume = 0.1;
-      this.explosion = new Audio("../sounds/explosion.wav");
+      this.explosion = new Audio("sounds/explosion.wav");
       this.explosion.volume = 0.1;
     }
 

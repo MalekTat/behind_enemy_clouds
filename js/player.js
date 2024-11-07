@@ -8,7 +8,7 @@ class Player {
       this.directionX = 0;
       this.directionY = 0;
 
-      //this is creating the player and adding him to the screen
+    
       this.element = document.createElement("img");
       this.element.src = "images/bomber.png";
       this.element.style.position = "absolute";
@@ -19,7 +19,7 @@ class Player {
 
       this.gameScreen.appendChild(this.element);
 
-      // this is creating the bracket and pointer and adding them to the screen
+      
       this.bracket = document.createElement("img");
       this.bracket.src = "images/bracket.png";
       this.bracket.style.position = "absolute";
