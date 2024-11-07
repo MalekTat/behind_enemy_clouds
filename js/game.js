@@ -16,6 +16,12 @@ class Game {
       this.gameIntervalId = null;
       this.gameLoopFrequency = Math.round(1000 / 60);
       this.frames = 0;
+
+
+      this.baseExplosion = new Audio("../sounds/baseExplosion.wav");
+      this.baseExplosion.volume = 0.1;
+      this.explosion = new Audio("../sounds/explosion.wav");
+      this.explosion.volume = 0.1;
     }
 
     start() {  
@@ -23,6 +29,7 @@ class Game {
       this.gameScreen.style.display = "block";
       this.startScreen.style.display = "none";
       this.updateLifeHearts() ;
+      this.scoreElement.innerText = `Your Score: ${this.score}`;
      
       this.gameIntervalId = setInterval(() => {
         this.gameLoop();
@@ -100,6 +107,7 @@ class Game {
               this.isGameOver = true;
             }
             this.updateLifeHearts();
+            this.explosion.play();
           }
         });
 
@@ -109,11 +117,14 @@ class Game {
               this.bombs.splice(oneTargetIndex, 1);
               oneBomb.element.remove();
   
-              this.targets.splice(oneTargetIndex, 1);
-              oneTarget.element.remove();
+              // this.targets.splice(oneTargetIndex, 1);
+              // oneTarget.element.remove();
+
+              oneTarget.element.src = `images/baseexplosion.png `;
               
               this.score ++;
               this.scoreElement.innerText = `Your Score: ${this.score}`;
+              this.baseExplosion.play();
              
           }
         });
@@ -123,8 +134,8 @@ class Game {
     gameOver() {
       this.gameScreen.style.display = "none";
       this.endScreen.style.display = "block"; 
-      this.x = document.getElementById("score"); 
-      this.x.innerText = `the score is : ${this.score}`   
+      this.x = document.getElementById("final-score"); 
+      this.x.innerText = `Your score is : ${this.score}`   
     }
 
 
