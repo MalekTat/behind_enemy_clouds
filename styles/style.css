@@ -228,7 +228,7 @@ body, html {
     background-image: url(../images/background.png);
     background-size: cover; 
     transform: translateX(0);
-    animation: slide 15s linear infinite; 
+    animation: slide 22s linear infinite; 
     
 }
   
@@ -245,36 +245,41 @@ body, html {
 
 #lives {
   position: absolute;
-  top : 3%;
-  left: 79%;
-  height: 5%;
-  width: 20%;
+  top : 1%;
+  left: 81.9%;
+  height: 6%;
+  width: 15%;
   background-color: rgb(51, 53, 53);
-  /* box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); */
   border-radius: .5em;
 }
 .life-on , .life-off {
   height: 95%;
-  width: 20%;
+  width: 33.33%;
 }
 
 #score {
   position : absolute;
-  top : 5%;
+  top : 7%;
   left: 79%;
-  height:7% ;
+  height:5% ;
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 200%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight:bolder;
-
+  font-size:3vh;
+  font-family:Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:1000;
 }
 
 
+#radar {
+  position: absolute;
+  top : 16%;
+  left: 82%;
+  height:22%;
+  width: 15%;
 
+}
 
 
 
@@ -296,21 +301,21 @@ body, html {
   #game-over {
 
     position: absolute;
-    top : 27%;
+    top : 26%;
     left: 63%;
     width: 20%;
-
     font-family:monospace;
-    font-size: 300%;
+    font-size: 5vh;
     font-weight: 700;
   }
 
   #final-score {
     position: absolute;
     top : 64%;
-    left: 18%;
+    left: 17%;
+    width: 35%;
     font-family:monospace;
-    font-size: 300%;
+    font-size: 5vh;
     font-weight: 700;
   }
 
@@ -341,15 +346,3 @@ body, html {
     opacity: 80%;
   }
   
-  
-
-
-
-
-
-
-
-
-
-
-

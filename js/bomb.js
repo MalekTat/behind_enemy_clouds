@@ -20,8 +20,7 @@ class bomb {
     }
 
     move() {
-      this.left += 0.01;
-      this.top += 0.25;
+      this.top += 0.40;
       this.updatePosition();
     }
 

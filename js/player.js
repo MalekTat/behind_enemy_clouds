@@ -18,30 +18,7 @@ class Player {
       this.element.style.left = `${this.left}%`;
 
       this.gameScreen.appendChild(this.element);
-
-      
-      this.bracket = document.createElement("img");
-      this.bracket.src = "images/bracket.png";
-      this.bracket.style.position = "absolute";
-      this.bracket.style.height = `10%`;
-      this.bracket.style.width = `20%`;
-      this.bracket.style.top = `87%`;
-      this.bracket.style.left = `${this.left + 50}%`;
-
-      this.gameScreen.appendChild(this.bracket);
-
-      this.pointer = document.createElement("img");
-      this.pointer.src = "images/pointer.png";
-      this.pointer.style.position = "absolute";
-      this.pointer.style.height = `2.5%`;
-      this.pointer.style.width = `1.5%`;
-      this.pointer.style.top = `94%`;
-      this.pointer.style.left = `${this.left + 70 - this.top}%`;
-
-      this.gameScreen.appendChild(this.pointer);
-
-     
-      
+       
     }
 
     move() {
@@ -52,16 +29,16 @@ class Player {
         this.left = 2;
       }
       
-      if (this.left > 30 ) {
-        this.left = 30;
+      if (this.left > 60 ) {
+        this.left = 60;
       }
       
       if (this.top < 2) {
         this.top = 2;
       }
 
-      if (this.top > 19.25) {
-        this.top = 19.25;
+      if (this.top > 25) {
+        this.top = 25;
       }
 
       this.updatePosition();
@@ -70,8 +47,6 @@ class Player {
     updatePosition() {   
       this.element.style.left = `${this.left}%`;
       this.element.style.top = `${this.top}%`;
-      this.bracket.style.left= `${this.left + 50}%`;
-      this.pointer.style.left = `${this.left + 70 - this.top}%`;
     }
    
   }
