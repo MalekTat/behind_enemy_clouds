@@ -281,6 +281,30 @@ body, html {
 
 }
 
+#sound-button {
+  position: absolute;
+  top: 92%;
+  left: 94%;
+  width: 4%;
+  height:5.5%;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  opacity: 0.2;
+  background-image: url(../images/mute.png);
+  background-size: 100%;
+
+}
+
+#sound-button:hover {
+  opacity: 0.8;
+}
+
+
+
 
 
 

@@ -2,8 +2,11 @@ window.onload = function () {
 
     const startButton = document.getElementById("start-button");
     const restartButton = document.getElementById("restart-button");
-    let myGame;
+    const soundButton = document.getElementById("sound-button");
 
+
+    let myGame;
+    let sound = true;
 
     startButton.addEventListener("click", function () {
       startGame();
@@ -46,6 +49,20 @@ window.onload = function () {
       }
 
     });
+
+
+     soundButton.addEventListener("click", () => {
+      if (sound){
+        myGame.backgroundSound.pause();
+        soundButton.style.backgroundImage="url(images/unmute.png)";
+        sound = false;
+      }else{
+        myGame.backgroundSound.play();
+        soundButton.style.backgroundImage = "url(images/mute.png)";
+        sound = true;
+      }
+      
+      });
 
     function startGame() {
       myGame = new Game();

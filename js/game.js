@@ -18,10 +18,13 @@ class Game {
       this.frames = 0;
 
 
+      this.backgroundSound = new Audio("sounds/backgroundSound.mp3");
+      this.backgroundSound.volume = 0.05;
       this.baseExplosion = new Audio("sounds/baseExplosion.wav");
-      this.baseExplosion.volume = 0.1;
+      this.baseExplosion.volume = 0.05;
       this.explosion = new Audio("sounds/explosion.wav");
-      this.explosion.volume = 0.1;
+      this.explosion.volume = 0.05;
+      
     }
 
     start() {  
@@ -29,6 +32,7 @@ class Game {
       this.startScreen.style.display = "none";
       this.updateLifeHearts() ;
       this.scoreElement.innerText = `Your Score: ${this.score}`;
+      this.backgroundSound.play();
      
       this.gameIntervalId = setInterval(() => {
         this.gameLoop();
@@ -44,7 +48,7 @@ class Game {
         this.gameOver();
       }
 
-      if (this.frames % 150 === 0) {
+      if (this.frames % 125 === 0) {
         this.airplanes.push(new airplane());
       }
 
@@ -147,7 +151,8 @@ class Game {
     gameOver() {
       this.gameScreen.style.display = "none";
       this.endScreen.style.display = "block"; 
-      document.getElementById("final-score").innerText = `Your score is : ${this.score}`;   
+      document.getElementById("final-score").innerText = `Your score is : ${this.score}`;
+      this.backgroundSound.pause();   
     }
 
 
