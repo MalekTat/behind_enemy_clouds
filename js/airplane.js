@@ -11,7 +11,7 @@ class airplane {
       
      
       this.element = document.createElement("img");
-      this.randNum = Math.floor(Math.random() * 6 )
+      this.randNum = Math.floor(Math.random() * 15 )
       this.element.src = `images/airlines/airline${this.randNum}.png`;
       this.element.style.position = "absolute";
       this.element.style.height = `${this.height}%`;

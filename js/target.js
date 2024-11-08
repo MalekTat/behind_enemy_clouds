@@ -5,11 +5,11 @@ class target {
       this.randomIndex = Math.floor(Math.random() * this.positions.length);
       this.left = this.positions[this.randomIndex].left;
       this.top = this.positions[this.randomIndex].top;
-      this.width = 10;
+      this.width = 7;
       this.height = 7;
      
       this.element = document.createElement("img");
-      this.randNum = Math.floor(Math.random() * 3 )
+      this.randNum = Math.floor(Math.random() * 14 )
       this.element.src = `images/targets/target${this.randNum}.png`;
       this.element.style.position = "absolute";
       this.element.style.height = `${this.height}%`;

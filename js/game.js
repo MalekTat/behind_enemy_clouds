@@ -48,7 +48,7 @@ class Game {
         this.airplanes.push(new airplane());
       }
 
-      if (this.frames % 600 === 0) {
+      if (this.frames % 300 === 0) {
         this.targets.push(new target());
       }
   
